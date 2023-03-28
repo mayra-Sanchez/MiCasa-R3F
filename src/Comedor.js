@@ -1,0 +1,138 @@
+import React from "react";
+import { useGLTF } from "@react-three/drei";
+
+export default function Comedor(props) {
+  const { nodes, materials } = useGLTF("/static/reading_table_book_center.glb");
+  return (
+    <group {...props} dispose={null}>
+      <group rotation={[-Math.PI / 2, 0, 0]} scale ={0.15}>
+        <group
+          position={[190.85, -78.45, 65.6]}
+          rotation={[1.47, 0.95, 0.08]}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Material2_4.geometry}
+          material={materials.Color_L02}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Material3.geometry}
+          material={materials.material}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Material2_13.geometry}
+          material={materials.Light_String_Color}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Material2_15.geometry}
+          material={materials.Knobs_Metal}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Material2_16.geometry}
+          material={materials.Bookends_Color}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Material2_17.geometry}
+          material={materials.Light_Metal_Color}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Material2_1.geometry}
+          material={materials.Book02}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Material2_2.geometry}
+          material={materials.Book06}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Material2_3.geometry}
+          material={materials.Book03}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Material2_5.geometry}
+          material={materials.Pages}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Material2_7.geometry}
+          material={materials.Book07}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Material2_8.geometry}
+          material={materials.Book01}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Material2_9.geometry}
+          material={materials.Book04}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Material2_10.geometry}
+          material={materials.Book09}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Material2_11.geometry}
+          material={materials.Book08}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Material2_12.geometry}
+          material={materials.Scratched_Metal}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Material2_6.geometry}
+          material={materials.Book05}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Material2_18.geometry}
+          material={materials.Glass}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Material2_14.geometry}
+          material={materials.Bolt}
+        />
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Material2.geometry}
+          material={materials.Wood01}
+        />
+      </group>
+    </group>
+  );
+}
+
+useGLTF.preload("/static/reading_table_book_center.glb");
